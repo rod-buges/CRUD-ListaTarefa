@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Documento HTML, Idioma do documento PT-BR. -->
+
+<head> <!-- Providencia informações gerais (metadados) sobre o documento -->
+  <meta charset="UTF-8"> <!-- UTF-8 (UCS Transformation Format 8) Codificação de caracteres mais comum da World Wide Web (WWW). -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Meta exclusiva para Internet Explorer (introduzido no IE8), 
+    configura a página para ser renderizada como em outra versão do Internet Explorer.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- "viewport" controla como um site é exibido em um dispositivo móvel.-->
+  <title>CRUD-Tarefa</title> <!-- Da um título a determinada página. -->
+  <link rel="stylesheet" href="style.css"> <!-- Linka o CSS com o HTML --> <!-- CSS - Cascading Style Sheets-->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> <!-- Importa box icons para uso no documento -->
+</head>
+
+<body> <!-- Define o corpo do documento -->
+  <div class="container"> <!-- O container é um componente do Bootstrap que garante que o seu layout vai ficar alinhado corretamente na página. -->
+    <!--  DIV é um container genérico para conteúdo de fluxo, que de certa forma não representa nada. 
+      Ele pode ser utilizado para agrupar elementos para fins de estilos usando class ou id -->
+    <div class="header"> <!-- Header é o cabeçalho da página -->
+      <span>Lista de Tarefas</span> <!-- span é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. 
+        Ele pode ser usado para agrupar elementos para fins de estilo usando os atributos class ou id -->
+        <!-- A diferença entre essas tags é que <div> faz o agrupamento dos elementos a nível de bloco enquanto o <span> faz o agrupamento a nível de linha. -->
+      <button onclick="openModal()" id="new">Incluir</i></button> <!-- Button é botão, onclick é uma ação que vai ser chamada quando clicar no botão, id é identificador -->
+    </div>
+
+    <div class="divTable">
+      <table> <!--table é usado para definir tabelas. Tabelas são constituidas por linhas e por células-->
+        <thead> <!-- "Table Head Element" ou linha de cabeçalho de uma tabela HTML, é utilizado para destacar os títulos das colunas de uma tabela. -->
+          <tr> <!-- Uma tabela é dividida em linhas (com a tag <tr>), e cada linha é dividida em células de dados (com a tag <td>). 
+            As letras td significam "table data," que é o conteúdo de uma célula de dados. -->
+            <th>Tarefa</th> <!-- TH significa "Table Header" e define uma célula em tudo idêntica às definidas com a tag TD, 
+              exceptuando que, por defeito, o browser utiliza o estilo bold (negrito) na apresentação do texto. CAPTION define o titulo da tabela. -->
+           
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody> <!-- É o espaço onde são colocadas as linhas dos detalhes, de dados, em uma tabela HTML. -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <form> <!-- Essa tag indica que estamos iniciando um formulário, recebe como principais atributos method que recebe como valor o método http que esse formulário irá executar (get, post) 
+          e action que especifica para onde enviar os dados do formulário quando um formulário é enviado. -->
+          <label for="m-nome">Tarefa</label> <!-- Representa uma legenda para melhorar a acessibilidade de um item de interface do usuário. -->
+          <input id="m-nome" type="text" required /> <!-- é usado para criar controles interativos para formulários baseados na web para receber dados do usuário (Espaço pra escrever algum dado)-->
+          <button id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script> <!-- Linka o documento javascript com o documento html -->
+</body>
+
+</html>
